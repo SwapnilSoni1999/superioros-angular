@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row" style="float: none">
+   
+
+    <section *ngFor="let device of devices">
+      <div class="col-md-4 ngforwala">
+        <mat-card class="example-card d-block" [ngStyle]="{
+          'width': acchaBro()
+        }">
+          <mat-list-item>
+            <mat-card-header>
+              <div mat-card-avatar class="text-center">
+                <i class="fas fa-mobile-alt fa-3x"></i>
+              </div>
+              <mat-card-title>{{device.device_name}}</mat-card-title>
+              <mat-card-subtitle>{{device.codename}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <mat-card-content>
+              <i class="fas fa-tools ml-2 mt-3" style="font-size:18px"></i>
+              <span style="margin-left: 35px;">{{device.maintainer_name}}</span>
+            </mat-card-content>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <button mat-button color="primary"><a [href]="device.url" style="text-decoration: none">Download</a></button>
+            <button mat-button><a [href]="device.xda_thread" style="text-decoration: none; color:black">XDA Thread</a></button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </section>
+
+
+
+  </div>
+</div>
