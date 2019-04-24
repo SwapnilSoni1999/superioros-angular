@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Vermin-Vibes';
+  src: url('/assets/font/Vermin-Vibes.eot');
+  src: url('/assets/font/Vermin-Vibes.eot?#iefix') format('embedded-opentype'),
+       url('/assets/font/Vermin-Vibes.svg#Vermin-Vibes') format('svg'),
+       url('/assets/font/Vermin-Vibes.ttf') format('truetype'),
+       url('/assets/font/Vermin-Vibes.woff') format('woff'),
+       url('/assets/font/Vermin-Vibes.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.superior {
+  font-family: 'Vermin-Vibes';
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.row > div {
+  margin-top: 10px;
+}
+.ngforwala {
+  margin-top: 10px;
+  
+}
+
+.fas {
+  margin-top:5px;
+}
