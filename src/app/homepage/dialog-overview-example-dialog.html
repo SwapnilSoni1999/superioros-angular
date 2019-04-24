@@ -1,0 +1,27 @@
+<h1 mat-dialog-title> {{ findStatus }}</h1>
+<div mat-dialog-content>
+    <div class="container-fluid mb-2">
+        <div class="row">
+            <div class="col-3">
+                <div *ngIf="loadinAnim">
+                    <mat-progress-spinner [color]="color" [mode]="mode" [diameter]="30">
+                    </mat-progress-spinner>
+                </div>
+            </div>
+
+            <div [class.col-9]="">
+                <div *ngIf="!loadin" [innerHTML]="tekst">
+                    <!-- device info will be dispayed here-->
+                </div>
+                <div *ngIf="loadin">
+                     {{ processMessage }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div mat-dialog-actions class="mt-3">
+    <button mat-button class="primary"><a [href]="buildURL" *ngIf="!loadin && buildFound" style="text-decoration: none" >Download</a></button>
+    <button mat-button [mat-dialog-close]="null">Cancel</button>
+</div>
