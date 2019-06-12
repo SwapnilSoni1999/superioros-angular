@@ -25,7 +25,7 @@
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-card-actions>
-            <button mat-button color="primary"><a [href]="device.url" style="text-decoration: none">Download</a></button>
+            <button mat-button color="primary"><a [routerLink]="device.codename" style="text-decoration: none">Download</a></button>
             <button mat-button><a [href]="device.xda_thread" style="text-decoration: none; color:black">XDA Thread</a></button>
           </mat-card-actions>
         </mat-card>
