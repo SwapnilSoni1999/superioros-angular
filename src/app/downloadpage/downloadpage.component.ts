@@ -32,18 +32,11 @@ export class DownloadpageComponent implements OnInit,AfterContentInit {
         (<HTMLElement>elements[i]).style.setProperty('width', matCardWid, 'important');
       }
     }
-    else if (this.innerWidth > 1300) {
-      matCardWid = this.innerWidth - 1200;
-      var elements = document.getElementsByClassName('example-card');
+    else {
+      console.log("this no phone");
+      var elements = document.getElementsByTagName('mat-card');
       for (var i = 0; i < elements.length; i++) {
-        (<HTMLElement>elements[i]).style.width = matCardWid + 'px';
-      }
-    }
-    else if(this.innerWidth > 1000) {
-      matCardWid = this.innerWidth - 900;
-      var elements = document.getElementsByClassName('example-card');
-      for (var i = 0; i < elements.length; i++) {
-        (<HTMLElement>elements[i]).style.width = matCardWid + 'px';
+        console.log((<HTMLElement>elements[i]).style.removeProperty('width'));
       }
     }
   }
@@ -60,21 +53,13 @@ export class DownloadpageComponent implements OnInit,AfterContentInit {
         (<HTMLElement>elements[i]).style.width = matCardWid + 'px';
       }
     }
-    else if (this.innerWidth > 1300) {
-      matCardWid = this.innerWidth - 1200;
-      var elements = document.getElementsByClassName('example-card');
+    else {
+      console.log("this no phone");
+      var elements = document.getElementsByTagName('mat-card');
       for (var i = 0; i < elements.length; i++) {
-        (<HTMLElement>elements[i]).style.width = matCardWid + 'px';
+        console.log((<HTMLElement>elements[i]).style.removeProperty('width'));
       }
     }
-    else if (this.innerWidth > 1000) {
-      matCardWid = this.innerWidth - 900;
-      var elements = document.getElementsByClassName('example-card');
-      for (var i = 0; i < elements.length; i++) {
-        (<HTMLElement>elements[i]).style.width = matCardWid + 'px';
-      }
-    }
-    
   }
 
   math = Math;
@@ -120,18 +105,6 @@ export class DownloadpageComponent implements OnInit,AfterContentInit {
           });
         }
       }
-
-      // this.jsun.getJSON(data[4].git_url).subscribe(data => {
-      //   // // @ts-ignore
-      //   // console.log(atob(data.content));
-      //   // // @ts-ignore
-      //   // var detaa = atob(data.content);
-      //   // detaa = JSON.parse(detaa);
-      //   // console.log(detaa);
-      //   // console.log(detaa.response[0].size);
-      //   // console.log(this.bytesToSize(detaa.response[0].size));
-
-      // });
     });
     this.acchaBro();
   }
