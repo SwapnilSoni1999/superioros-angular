@@ -12,14 +12,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="Build" style="margin-left: 5px">
         <th mat-header-cell *matHeaderCellDef> Build </th>
-        <div *ngIf="!phun">
-            <td mat-cell *matCellDef="let element"> {{element.build}} </td>
-        </div>
-        <div *ngIf="phun">
-            <marquee>
-                <td mat-cell *matCellDef="let element" style="overflow: hidden;"> {{element.build}} </td>
-            </marquee>
-        </div>        
+        <td mat-cell *matCellDef="let element"> {{element.build}} </td>       
     </ng-container>
 
     <!-- Weight Column -->

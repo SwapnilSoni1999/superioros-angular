@@ -20,7 +20,6 @@ export class DeviceDownloadComponent implements OnInit {
 
   displayedColumns: string[] = ['Date', 'Build', 'Size', 'Download'];
   dataSource;
-  phun: boolean = false;
   math = Math;
 
   currentDevice: Object;
@@ -46,10 +45,6 @@ export class DeviceDownloadComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    if (navigator.userAgent.match(/Mobile/)) {
-      this.phun = true;
-    }
 
     this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents').subscribe(data => {
       // @ts-ignore
