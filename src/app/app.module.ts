@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderMainComponent } from './header-main/header-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
+
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatDialogModule, MatProgressSpinnerModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+
 import { HomepageComponent, DialogOverviewExampleDialog, InfoPanelDialog } from './homepage/homepage.component';
 import { DownloadpageComponent } from './downloadpage/downloadpage.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,9 +28,25 @@ import { DeviceDownloadComponent } from './device-download/device-download.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [],
+  entryComponents: [HomepageComponent, DialogOverviewExampleDialog, InfoPanelDialog],
+  providers: [DOMParser],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

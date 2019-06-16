@@ -1,0 +1,7 @@
+table {
+    width: 90%;
+    margin: 20px auto;
+}
+table > ng-container {
+    font-family: sans-serif;
+}

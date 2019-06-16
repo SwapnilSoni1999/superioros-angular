@@ -1,3 +1,45 @@
-<p>
-  device-download works!
-</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Build" style="margin-left: 5px">
+        <th mat-header-cell *matHeaderCellDef> Build </th>
+        <div *ngIf="!phun">
+            <td mat-cell *matCellDef="let element"> {{element.build}} </td>
+        </div>
+        <div *ngIf="phun">
+            <marquee>
+                <td mat-cell *matCellDef="let element" style="overflow: hidden;"> {{element.build}} </td>
+            </marquee>
+        </div>        
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Size">
+        <th mat-header-cell *matHeaderCellDef> Size </th>
+        <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Download" class="text-center">
+        <th mat-header-cell *matHeaderCellDef> Download </th>
+        <td mat-cell *matCellDef="let element"> 
+            <a [href]="element.download" style="color: inherit; margin-left:7px">
+                    <button mat-icon-button aria-label="Download ROM">
+                    <mat-icon>save_alt</mat-icon>
+                </button>
+            </a>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

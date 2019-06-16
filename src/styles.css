@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+*:focus {
+  outline: none !important;
+  border: 0 !important;
+}
 
 .superior {
   font-family: 'Vermin-Vibes';
