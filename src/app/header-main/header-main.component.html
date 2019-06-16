@@ -33,6 +33,11 @@
       <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
         <a mat-list-item routerLink="/downloads/pie" (click)="toggal() ? drawer.toggle() : null" id="pie">Pie</a>
       </div>
+      <footer class="fixed-bottom">
+        <sup>
+          Made with <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> by <a href="http://swapnilsoni.me" target="_blank" rel="noopener noreferrer" class="swapnil">Swapnil Soni</a>
+        </sup>
+      </footer>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

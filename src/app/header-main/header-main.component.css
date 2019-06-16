@@ -2,6 +2,19 @@
   height: 100%;
 }
 
+.fixed-bottom {
+  margin-left: 40px;
+}
+
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.swapnil:hover {
+  text-decoration: underline;
+}
+
 .sidenav {
   width: 250px;
 }
