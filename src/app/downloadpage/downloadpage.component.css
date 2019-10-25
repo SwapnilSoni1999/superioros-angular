@@ -3,3 +3,8 @@
     width: max-content;
 }
 
+mat-spinner {
+    display: block;
+    margin: auto;
+}
+

@@ -9,6 +9,7 @@ import { JsonParseService } from '../json-parse.service';
 export class DownloadpageComponent implements OnInit,AfterContentInit {
   public innerWidth: any;
   public devices: Array<any> = [];
+  isLoading: Boolean = false;
 
   ngAfterContentInit() {
     setTimeout(function() {
@@ -84,8 +85,8 @@ export class DownloadpageComponent implements OnInit,AfterContentInit {
   
 
   ngOnInit() {
-
-    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents').subscribe(data => {
+    this.isLoading = false;
+    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents?ref=pie').subscribe(data => {
       console.log(data);
       // @ts-ignore
       for(var i=0; i<data.length; i++) {
@@ -97,6 +98,7 @@ export class DownloadpageComponent implements OnInit,AfterContentInit {
             // @ts-ignore
             mainData = JSON.parse(data);
             console.log(mainData);
+            this.isLoading = true;
             for(var j=0; j<mainData.length; j++) {
               console.log(mainData[j]);
               this.devices.push(mainData[j]);

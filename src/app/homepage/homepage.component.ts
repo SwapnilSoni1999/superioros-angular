@@ -127,7 +127,7 @@ export class DialogOverviewExampleDialog implements OnInit {
 
     this.findStatus = "Processing...";
     this.processMessage = "Reading device name...";
-    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents').subscribe(data => {
+    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents?ref=pie').subscribe(data => {
       console.log(data);
       // @ts-ignore
       for (var i = 0; i < data.length; i++) {

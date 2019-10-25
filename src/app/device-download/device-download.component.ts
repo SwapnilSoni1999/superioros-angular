@@ -46,7 +46,7 @@ export class DeviceDownloadComponent implements OnInit {
 
   ngOnInit() {
 
-    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents').subscribe(data => {
+    this.jsun.getJSON('https://api.github.com/repos/SuperiorOS/official_devices/contents?ref=pie').subscribe(data => {
       // @ts-ignore
       for (var i = 0; i < data.length; i++) {
         if (data[i].name == 'devices.json') {

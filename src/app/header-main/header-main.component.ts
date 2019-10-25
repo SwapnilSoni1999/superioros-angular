@@ -11,7 +11,7 @@ import { MatSidenav, MAT_DRAWER_DEFAULT_AUTOSIZE } from '@angular/material';
 })
 export class HeaderMainComponent implements OnInit {
 
-  @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('sidenav', { static: false }) sidenav: MatSidenav;
   isExpanded = true;
   showSubmenu: boolean = false;
   isShowing = false;
