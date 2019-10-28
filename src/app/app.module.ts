@@ -49,7 +49,7 @@ import { TeamComponent } from './team/team.component';
     MatExpansionModule
   ],
   entryComponents: [HomepageComponent, DialogOverviewExampleDialog, InfoPanelDialog],
-  providers: [DOMParser],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
