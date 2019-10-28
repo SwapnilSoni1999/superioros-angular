@@ -1,0 +1,15 @@
+mat-expansion-panel {
+    margin: 20px 20px;
+}
+
+.right-aligned-header > .mat-content {
+    justify-content: space-between;
+}
+
+.mat-content > mat-panel-title, .mat-content > mat-panel-description {
+  flex: 0 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
